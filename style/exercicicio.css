@@ -1,83 +1,120 @@
 * {
-  font-family: Arial, Helvetica, sans-serif;
-  padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  padding: 0;
   border: 0;
   outline: 0;
+  box-sizing: border-box;
   text-decoration: none;
+  font-family: sans-serif;
 }
 
+@font-face {
+  font-family: "Axiforma";
+  src: url(../assets/Axiforma.otf);
+}
+
+/* variaveis CSS */
 :root {
   --bg-primary: #041643;
-  --color-primary: #1352f1;
+  --color-primary: #1352F1;
   --color-white: #fff;
 
-  --gray: #4e4e4e;
-  --dark-gray: #696969;
-  --ligth-gray: #afafaf;
+  /* gradiente cinza */
+  --gray: #4E4E4E;
+  --dark-gray: #696969; 
+  --light-gray: #AFAFAF;
+  --lighter-gray: #d7d7d7;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: var(--bg-primary);
   background-image: url(../assets/gradient\ 2-03\ 1.png);
+  background-size: 105vh;
   background-repeat: no-repeat;
-  background-size: 50%;
-  padding: 91px 123px;
-  height: 100vh;
+  padding: 91px 123px 30px;
+  height: 100vh; /* viewport */
 }
 
-.intro {
+section {
   margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 100px;
 }
 
-.intro > h1 {
-  width: 230px;
-  margin-bottom: 23px;
+.div-intro {
+  flex: 1;
+  padding: 50px 30px;
+  width: 343.33px;
 }
 
-.intro > p {
-  color: var(--ligth-gray);
+.div-intro > h1 {
+  /* width: 230px; */
+  width: 12ch; /* ch = character */
+  margin-bottom: 23px; 
 }
 
-.titulo {
-  color: white;
+.div-intro > p {
+  color: var(--light-gray);
 }
 
 form {
+  border-radius: 10px;
+  flex: 1;
   background-color: var(--color-white);
   width: 343.33px;
   padding: 50px 30px;
-  border-radius: 10px;
 }
 
-form label {
+form label, form input {
   font-size: 8px;
+  color: var(--dark-gray);
 }
 
 form input {
+  /* largura */
   width: 100%;
+  border: 1px solid var(--lighter-gray);
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 24px;
 }
 
-.cadastro {
+/* ::pseudo-element */
+form input::placeholder {
+  color: var(--lighter-gray);
+}
+
+.div-link-btn {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link-cadastro {
   font-size: 10px;
   color: var(--gray);
 }
 
-.cadastro a {
-  color: var(--gray);
+.link-cadastro a {
   font-weight: 600;
+  color: var(--gray);
 }
 
-.login {
+.button {
   background-color: var(--color-primary);
   color: var(--color-white);
-  border-radius: 5px;
   padding: 10px 37px;
+  border-radius: 5px;
   font-size: 9px;
-  font-weight: bold;
 }
 
 footer > p {
   color: var(--color-white);
+  text-align: center;
 }
