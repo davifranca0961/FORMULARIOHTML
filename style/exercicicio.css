@@ -5,7 +5,7 @@
   outline: 0;
   box-sizing: border-box;
   text-decoration: none;
-  font-family: sans-serif;
+  font-family: 'Axiforma', sans-serif;
 }
 
 @font-face {
@@ -17,6 +17,7 @@
 :root {
   --bg-primary: #041643;
   --color-primary: #1352F1;
+  --color-secondary: #1352f1d6;
   --color-white: #fff;
 
   /* gradiente cinza */
@@ -66,7 +67,8 @@ form {
   border-radius: 10px;
   flex: 1;
   background-color: var(--color-white);
-  width: 343.33px;
+  max-width: 500px;
+  min-width: 500px;
   padding: 50px 30px;
 }
 
@@ -82,6 +84,10 @@ form input {
   padding: 10px;
   border-radius: 4px;
   margin-bottom: 24px;
+}
+
+form input:focus {
+  border-color: var(--bg-primary);
 }
 
 /* ::pseudo-element */
@@ -109,9 +115,20 @@ form input::placeholder {
 .button {
   background-color: var(--color-primary);
   color: var(--color-white);
-  padding: 10px 37px;
+  padding: 10px 50px;
   border-radius: 5px;
   font-size: 9px;
+}
+
+.button:hover {
+  background-color: var(--bg-primary);
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+
+.button:active {
+  background-color: var(--color-primary);
+  transform: translateY(2px);
 }
 
 footer > p {
