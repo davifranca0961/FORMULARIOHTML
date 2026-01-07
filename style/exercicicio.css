@@ -135,3 +135,12 @@ footer > p {
   color: var(--color-white);
   text-align: center;
 }
+
+@media screen and (width <=1024px) {
+  .div-form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+}
